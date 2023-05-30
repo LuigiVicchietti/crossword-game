@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./assets/crossword-icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <title>Projeto - Crossword</title>
+</head>
+
+<body>
+    <main>
+        <section id="left">
+            <div id="info_container">
+                <div id="intro">
+                    <h1>Palavra <span class="yellow">Cruzada</span></h1>
+                    <p>
+                        Quer disafiar seus conhecimentos na área tecnica de TI? Nesta palavra cruzada haverá conceitos
+                        sobre arquitetura de TI vistos na aula de Arquitetura Computacional da SPTECH!
+                    </p>
+                </div>
+                <div id="sum">
+                    <div id="mode_container">
+                        <h2 class="now" id="page_list">Guia para <span class="yellow">respostas</span></h2>
+                        <span class="line"></span>
+                        <button id="btn_mode"><img class="select-disable" id="switch_title"
+                                src="./assets/icons/ArrowsClockwise.png" alt="Troca de modo"></button>
+                        <h2 id="page_crossword">Palavras <span class="yellow">cruzadas</span></h2>
+                    </div>
+                    <div id="list_container">
+                        <div class="rows">
+                            <span class="item-row">Chip de memória do computador que mantém informações
+                                armazenadas sem a necessidade de uma fonte de energia:
+                                <text class="num-guia select-disable">1°</text>
+                            </span>
+
+                            <span class="item-row">Processador com quatro núcleos
+                                <text class="num-guia select-disable">2°</text>
+                            </span>
+
+                            <span class="item-row">Unidade fundamental para permitir à CPU acessar memórias
+                                e/ou periféricos externos
+                                <text class="num-guia select-disable">3°</text>
+                            </span>
+                            <span class="item-row">Dispositivo que pode ter os dados regravados por meio de
+                                um componente que emite luz ultravidiveta
+                                <text class="num-guia select-disable">4°</text>
+                            </span>
+                        </div>
+                        <div class="rows">
+                            <span class="item-row">Identificador do ''endereço''/locaspanzação dos dados
+                                <text class="num-guia select-disable">5°</text>
+                            </span>
+
+                            <span class="item-row">Memória de alta velocidade, utispanzada para armazenar
+                                informações necessárias para a execução de instruções
+                                <text class="num-guia select-disable">6°</text>
+                            </span>
+                            <span class="item-row">Processador da Intel que oferece um maior desempenho,
+                                estando entre os mais potentes do mercado
+                                <text class="num-guia select-disable">7°</text>
+                            </span>
+                            <span class="item-row">Componente responsável por carregar as configurações
+                                básicas antes de iniciaspanzar o sistema operacional
+                                <text class="num-guia select-disable">8°</text>
+                            </span>
+                        </div>
+                        <div class="rows">
+                            <span class="item-row">Processador com dois núcleos
+                                <text class="num-guia select-disable">9°</text>
+                            </span>
+                            <span class="item-row">Recurso da placa-mãe que capacita o acesso dos periféricos direto à
+                                memoria RAM,
+                                sem que haja a sobrecarga do processador
+                                <text class="num-guia select-disable">10°</text>
+                            </span>
+
+                            <span class="item-row">Componente que torna possível abrir programas e editar arquivos de
+                                uma
+                                forma ágil
+                                <text class="num-guia select-disable">11°</text>
+                            </span>
+
+                            <span class="item-row">Responsável por transferir dados ente os componentes de um
+                                computador
+                                <text class="num-guia select-disable">12°</text>
+                            </span>
+                        </div>
+                        <div class="rows">
+                            <span class="item-row"> Componente que faz com que: dada uma entrada de dados,
+                                haja uma saída pós processamento
+                                <text class="num-guia select-disable">13°</text>
+                            </span>
+                            <span class="item-row">Componente de exatas do computador
+                                <text class="num-guia select-disable">14°</text>
+                            </span>
+
+                            <span class="item-row">Item não-vdivátil que faz com que as informações permaneçam mesmo
+                                com o desligamento do computador ou a ausência de energia
+                                <text class="num-guia select-disable">15°</text>
+                            </span>
+
+                            <span class="item-row">Processador da Intel que oferece um ótimo custo benefício em relação
+                                aos
+                                processadores do
+                                topo:
+                                <text class="num-guia select-disable">16°</text>
+                            </span>
+                        </div>
+                    </div>
+                    <div id="crossword_container">
+                        <table class="select-disable">
+                            <tr>
+                                <td></td>
+                                <td>1</td>
+                                <td><input id="F" onkeyup="result(this);" type="text" maxlength="1"></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td></td>
+                                <td><input id="L" onkeyup="result(this);" type="text" maxlength="1"></td>
+                                <td></td>
+                                <td></td>
+                                <td>3</td>
+                                <td></td>
+                                <td></td>
+                                <td>4</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td><input id="Q" onkeyup="result(this);" type="text" maxlength="1"></td>
+                                <td><input id="U" onkeyup="result(this);" type="text" maxlength="1"></td>
+                                <td><input id="A" onkeyup="result(this);" type="text" maxlength="1"></td>
+                                <td><input id="D" onkeyup="result(this);" type="text" maxlength="1"></td>
+                                <td><input id="none" readonly="readonly"> </td>
+                                <td><input id="C" onkeyup="result(this);" type="text" maxlength="1"></td>
+                                <td><input id="O" onkeyup="result(this);" type="text" maxlength="1"></td>
+                                <td><input id="R" onkeyup="result(this);" type="text" maxlength="1"></td>
+                                <td><input id="E" onkeyup="result(this);" type="text" maxlength="1"></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>5</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td><input id="S" onkeyup="result(this);" type="text" maxlength="1"></td>
+                                <td></td>
+                                <td></td>
+                                <td><input id="S" onkeyup="result(this);" type="text" maxlength="1"></td>
+                                <td></td>
+                                <td></td>
+                                <td><input id="P" onkeyup="result(this);" type="text" maxlength="1"></td>
+                                <td></td>
+                                <td></td>
+                                <td>7</td>
+                                <td></td>
+                                <td></td>
+                                <td>8</td>
+                                <td></td>
+                                <td><input id="A" onkeyup="result(this);" type="text" maxlength="1"></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td><input id="H" onkeyup="result(this);" type="text" maxlength="1"></td>
+                                <td>9</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>6</td>
+                                <td><input id="R" onkeyup="result(this);" type="text" maxlength="1"></td>
+                                <td><input id="E" onkeyup="result(this);" type="text" maxlength="1"></td>
+                                <td><input id="G" onkeyup="result(this);" type="text" maxlength="1"></td>
+                                <td><input id="I" onkeyup="result(this);" type="text" maxlength="1"></td>
+                                <td><input id="S" onkeyup="result(this);" type="text" maxlength="1"></td>
+                                <td><input id="T" onkeyup="result(this);" type="text" maxlength="1"></td>
+                                <td><input id="R" onkeyup="result(this);" type="text" maxlength="1"></td>
+                                <td><input id="A" onkeyup="result(this);" type="text" maxlength="1"></td>
+                                <td><input id="D" onkeyup="result(this);" type="text" maxlength="1"></td>
+                                <td><input id="O" onkeyup="result(this);" type="text" maxlength="1"></td>
+                                <td><input id="R" onkeyup="result(this);" type="text" maxlength="1"></td>
+                                <td><input id="E" onkeyup="result(this);" type="text" maxlength="1"></td>
+                                <td><input id="S" onkeyup="result(this);" type="text" maxlength="1"></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td><input id="D" onkeyup="result(this);" type="text" maxlength="1"></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td><input id="O" onkeyup="result(this);" type="text" maxlength="1"></td>
+                                <td></td>
+                                <td></td>
+                                <td><input id="7" onkeyup="result(this);" type="text" maxlength="1"></td>
+                                <td></td>
+                                <td></td>
+                                <td><input id="O" onkeyup="result(this);" type="text" maxlength="1"></td>
+                                <td></td>
+                                <td><input id="D" onkeyup="result(this);" type="text" maxlength="1"></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td><input id="U" onkeyup="result(this);" type="text" maxlength="1"></td>
+                                <td></td>
+                                <td></td>
+                                <td>10 </td>
+                                <td><input id="D" onkeyup="result(this);" type="text" maxlength="1"></td>
+                                <td><input id="M" onkeyup="result(this);" type="text" maxlength="1"></td>
+                                <td><input id="A" onkeyup="result(this);" type="text" maxlength="1"></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td><input id="M" onkeyup="result(this);" type="text" maxlength="1"></td>
+                                <td></td>
+                                <td><input id="R" onkeyup="result(this);" type="text" maxlength="1"></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>11 </td>
+                                <td><input id="R" onkeyup="result(this);" type="text" maxlength="1"></td>
+                                <td><input id="A" onkeyup="result(this);" type="text" maxlength="1"></td>
+                                <td><input id="M" onkeyup="result(this);" type="text" maxlength="1"></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td><input id="E" onkeyup="result(this);" type="text" maxlength="1"></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td><input id="L" onkeyup="result(this);" type="text" maxlength="1"></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>12</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td><input id="S" onkeyup="result(this);" type="text" maxlength="1"></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td><input id="none" readonly="readonly"> </td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td><input id="D" onkeyup="result(this);" type="text" maxlength="1"></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td><input id="S" onkeyup="result(this);" type="text" maxlength="1"></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td><input id="C" onkeyup="result(this);" type="text" maxlength="1"></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>14</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td><input id="A" onkeyup="result(this);" type="text" maxlength="1"></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td><input id="none" readonly="readonly"> </td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td><input id="O" onkeyup="result(this);" type="text" maxlength="1"></td>
+                                <td></td>
+                                <td>13</td>
+                                <td><input id="C" onkeyup="result(this);" type="text" maxlength="1"></td>
+                                <td><input id="P" onkeyup="result(this);" type="text" maxlength="1"></td>
+                                <td><input id="U" onkeyup="result(this);" type="text" maxlength="1"></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td><input id="T" onkeyup="result(this);" type="text" maxlength="1"></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td><input id="B" onkeyup="result(this);" type="text" maxlength="1"></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td><input id="R" onkeyup="result(this);" type="text" maxlength="1"></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>16</td>
+                                <td><input id="L" onkeyup="result(this);" type="text" maxlength="1"></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td><input id="A" onkeyup="result(this);" type="text" maxlength="1"></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td><input id="U" onkeyup="result(this);" type="text" maxlength="1"></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>15</td>
+                                <td><input id="M" onkeyup="result(this);" type="text" maxlength="1"></td>
+                                <td><input id="E" onkeyup="result(this);" type="text" maxlength="1"></td>
+                                <td><input id="M" onkeyup="result(this);" type="text" maxlength="1"></td>
+                                <td><input id="O" onkeyup="result(this);" type="text" maxlength="1"></td>
+                                <td><input id="R" onkeyup="result(this);" type="text" maxlength="1"></td>
+                                <td><input id="I" onkeyup="result(this);" type="text" maxlength="1"></td>
+                                <td><input id="A" onkeyup="result(this);" type="text" maxlength="1"></td>
+                                <td><input id="none" readonly="readonly"> </td>
+                                <td><input id="D" onkeyup="result(this);" type="text" maxlength="1"></td>
+                                <td><input id="E" onkeyup="result(this);" type="text" maxlength="1"></td>
+                                <td><input id="none" readonly="readonly"> </td>
+                                <td><input id="M" onkeyup="result(this);" type="text" maxlength="1"></td>
+                                <td><input id="A" onkeyup="result(this);" type="text" maxlength="1"></td>
+                                <td><input id="S" onkeyup="result(this);" type="text" maxlength="1"></td>
+                                <td><input id="S" onkeyup="result(this);" type="text" maxlength="1"></td>
+                                <td><input id="A" onkeyup="result(this);" type="text" maxlength="1"></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td><input id="5" onkeyup="result(this);" type="text" maxlength="1"></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td><input id="B" onkeyup="result(this);" type="text" maxlength="1"></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td><input id="U" onkeyup="result(this);" type="text" maxlength="1"></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td><input id="S" onkeyup="result(this);" type="text" maxlength="1"></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="right">
+            <spline-viewer id="img3D"
+                url="https://prod.spline.design/FLhCgYDLZjfjDV8U/scene.splinecode"></spline-viewer>
+        </section>
+    </main>
+</body>
+
+</html>
+<script src="./js/index.js"></script>
+<script type="module" src="https://unpkg.com/@splinetool/viewer@0.9.330/build/spline-viewer.js"></script>

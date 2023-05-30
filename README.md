@@ -29,5 +29,5 @@ Também dou créditos a usar elementos do site <a href="https://viewer.spline.de
 
 - 📌 Finalizado.
 - 🛠 Site NÃO responsivo. Totalmente feito em HTML, CSS e JS puro.
-- 🔗 ??
+- 🔗 https://luigivicchietti.github.io/crossword-game/
 - 💞 Creditos a: <a href="https://viewer.spline.design/">Spline Viewer</a>! Link do site -> https://viewer.spline.design/
